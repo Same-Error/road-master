@@ -1,8 +1,26 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:road_master/onboarding1.dart';
 
-class Splash extends StatelessWidget {
+class Splash extends StatefulWidget {
   const Splash({super.key});
+
+  @override
+  State<Splash> createState() => _SplashState();
+}
+
+class _SplashState extends State<Splash> {
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    Timer(Duration(seconds: 3), () {
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => Onboarding1()));
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -30,54 +48,25 @@ class Splash extends StatelessWidget {
               ),
             ),
           ),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            // crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Container(
-                height: 100,
-                width: 100,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage("assets/frame.png"),
-                    fit: BoxFit.contain,
-                  ),
+          Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Column(
+                  children: [
+                    Image.asset("assets/splash/frame.png"),
+                    Gap(50),
+                    Image.asset("assets/splash/road_master.png"),
+                  ],
                 ),
-              ),
-              Gap(10),
-              Container(
-                height: 100,
-                width: 100,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage("assets/road_master.png"),
-                    fit: BoxFit.contain,
-                  ),
+                Column(
+                  children: [
+                    Image.asset("assets/splash/car.png"),
+                    Image.asset("assets/splash/this_action.png")
+                  ],
                 ),
-              ),
-              Gap(10),
-              Container(
-                height: 100,
-                width: 100,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage("assets/car.png"),
-                    fit: BoxFit.contain,
-                  ),
-                ),
-              ),
-              Gap(10),
-              Container(
-                height: 100,
-                width: 100,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage("assets/this_action.png"),
-                    fit: BoxFit.contain,
-                  ),
-                ),
-              ),
-            ],
+              ],
+            ),
           ),
         ],
       ),

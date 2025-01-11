@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:road_master/get_started1.dart';
+import 'package:road_master/onboarding1.dart';
+import 'package:road_master/questions.dart';
 import 'package:road_master/splash.dart';
+import 'package:road_master/t_c.dart';
 
 void main() {
   runApp(const MyApp());
@@ -32,7 +36,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
         useMaterial3: true,
       ),
-      home: Splash(),
+      home: Questions(),
     );
   }
 }
