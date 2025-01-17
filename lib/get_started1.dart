@@ -6,11 +6,12 @@ class GetStarted1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
+      appBar: AppBar(
+        title: Text("Appbar"),
+      ),
+      body: Column(
         children: [
           Image.asset("assets/getstarted/rectangle.png"),
-          // Image.asset("assets/getstarted/component.png"),
-          // Image.asset("assets/getstarted/group.png"),
         ],
       ),
     );

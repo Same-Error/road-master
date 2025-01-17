@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:road_master/onboarding3.dart';
+import 'package:road_master/t_c.dart';
 
-class Onboarding2 extends StatelessWidget {
-  const Onboarding2({super.key});
+class Onboarding3 extends StatelessWidget {
+  const Onboarding3({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,13 +11,13 @@ class Onboarding2 extends StatelessWidget {
       body: GestureDetector(
         onTap: () {
           Navigator.push(
-              context, MaterialPageRoute(builder: (context) => Onboarding3()));
+              context, MaterialPageRoute(builder: (context) => TC()));
         },
         child: Container(
           decoration: BoxDecoration(
             image: DecorationImage(
               fit: BoxFit.cover,
-              image: AssetImage("assets/onboarding/onboarding2.png"),
+              image: AssetImage("assets/onboarding/onboarding3.png"),
             ),
           ),
         ),

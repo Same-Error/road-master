@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:road_master/dashboard.dart';
 
 class Questions extends StatefulWidget {
   const Questions({super.key});
@@ -159,7 +160,14 @@ class _QuestionsState extends State<Questions> {
                         SizedBox(
                           width: 200,
                           child: ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => Dashboard(),
+                                ),
+                              );
+                            },
                             child: Text(
                               "Next",
                               style: TextStyle(
@@ -170,7 +178,6 @@ class _QuestionsState extends State<Questions> {
                             style: ButtonStyle(
                               backgroundColor: MaterialStatePropertyAll(
                                 Color(0xff2b319e),
-                          
                               ),
                             ),
                           ),
