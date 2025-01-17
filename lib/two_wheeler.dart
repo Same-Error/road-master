@@ -5,7 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:road_master/category_modal.dart';
 import 'package:road_master/tabbar_category.dart';
-import 'package:road_master/test_modal.dart';
+import 'package:road_master/test.dart';
+import 'package:road_master/modal/test_modal.dart';
 import 'package:http/http.dart' as http;
 
 class TwoWheeler extends StatefulWidget {
@@ -31,6 +32,13 @@ class _TwoWheelerState extends State<TwoWheeler> {
     }
   }
 
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    getCat();
+  }
+
   List<TestModal> test = [
     TestModal(image: "dl_test", name: "Driver's License Test"),
     TestModal(image: "road_test", name: "Road Test"),
@@ -39,13 +47,6 @@ class _TwoWheelerState extends State<TwoWheeler> {
     TestModal(image: "dl_test", name: "Commercial License Test"),
     TestModal(image: "motorcycle_skills_test", name: "Motorcycle Skills Test"),
   ];
-
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    getCat();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -221,6 +222,7 @@ class _TwoWheelerState extends State<TwoWheeler> {
                                               width: 100,
                                               child: Column(
                                                 mainAxisSize: MainAxisSize.min,
+                                                mainAxisAlignment: MainAxisAlignment.center,
                                                 children: [
                                                   SizedBox(
                                                     height: 80,
@@ -260,14 +262,5 @@ class _TwoWheelerState extends State<TwoWheeler> {
         ),
       ),
     );
-  }
-}
-
-class Test extends StatelessWidget {
-  const Test({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Placeholder();
   }
 }

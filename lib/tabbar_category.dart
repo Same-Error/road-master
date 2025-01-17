@@ -50,8 +50,11 @@ class _Tabbar_categoryState extends State<Tabbar_category> {
               itemCount: response!.length,
               itemBuilder: (context, i) {
                 return GestureDetector(
-                  onTap: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=> DrivingManuals()));
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => DrivingManuals()));
                   },
                   child: Card(
                     shape: RoundedRectangleBorder(
@@ -77,7 +80,7 @@ class _Tabbar_categoryState extends State<Tabbar_category> {
                           Text(
                             response![i].catName ?? "",
                             style: TextStyle(
-                              color: Colors.blue,
+                              color: Color(0xff2b319e),
                               fontWeight: FontWeight.bold,
                             ),
                             textAlign: TextAlign.center,

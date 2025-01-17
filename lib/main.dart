@@ -6,6 +6,8 @@ import 'package:road_master/get_started1.dart';
 import 'package:road_master/intro_to_driving.dart';
 import 'package:road_master/onboarding1.dart';
 import 'package:road_master/questions.dart';
+import 'package:road_master/result_fail.dart';
+import 'package:road_master/result_pass.dart';
 import 'package:road_master/splash.dart';
 import 'package:road_master/t_c.dart';
 import 'package:road_master/two_wheeler.dart';
@@ -41,7 +43,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
         useMaterial3: true,
       ),
-      home: TwoWheeler(),
+      home: ResultPass(),
     );
     // MultiProvider(
     //   providers: [ChangeNotifierProvider(create: (_) => CategoryController())],

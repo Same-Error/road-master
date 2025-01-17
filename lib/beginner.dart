@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:road_master/intro_to_driving.dart';
-import 'package:road_master/test_modal.dart';
+import 'package:road_master/modal/test_modal.dart';
 
 class Beginner_Manual extends StatelessWidget {
   Beginner_Manual({super.key});

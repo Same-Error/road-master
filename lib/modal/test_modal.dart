@@ -1,10 +1,12 @@
 class TestModal {
-  final String image;
-  final String name;
+  String? image;
+  String? name;
+  String? subname;
 
   TestModal({
-    required this.image,
-    required this.name,
+    this.image,
+    this.name,
+    this.subname,
   });
 }
 

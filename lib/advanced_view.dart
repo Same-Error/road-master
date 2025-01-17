@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:road_master/defence_driving.dart';
 import 'package:road_master/intro_to_driving.dart';
 import 'package:road_master/speed_control.dart';
-import 'package:road_master/test_modal.dart';
+import 'package:road_master/modal/test_modal.dart';
 
 class AdvancedView extends StatelessWidget {
   AdvancedView({super.key});

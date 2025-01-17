@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:road_master/advanced_view.dart';
 import 'package:road_master/beginner.dart';
 import 'package:road_master/intermediate.dart';
-import 'package:road_master/test_modal.dart';
+import 'package:road_master/modal/test_modal.dart';
 
 class DrivingManuals extends StatelessWidget {
   const DrivingManuals({super.key});
