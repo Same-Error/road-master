@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:road_master/vehicle_screen.dart';
+import 'package:road_master/view/vehicle_screen.dart';
 
 class Dashboard extends StatelessWidget {
   const Dashboard({super.key});
@@ -28,7 +28,7 @@ class Dashboard extends StatelessWidget {
             left: 0,
             right: 0,
             child: Image.asset(
-              "assets/dashboard/rectangle.png",
+              "assets/rectangle.png",
               fit: BoxFit.cover,
             ),
           ),
@@ -46,7 +46,7 @@ class Dashboard extends StatelessWidget {
                 );
               },
               child: Center(
-                child: Image.asset("assets/dashboard/component.png"),
+                child: Image.asset("assets/component.png"),
               ),
             ),
           ),
@@ -55,7 +55,7 @@ class Dashboard extends StatelessWidget {
             left: 0,
             right: 0,
             child: Center(
-              child: Image.asset("assets/dashboard/group.png"),
+              child: Image.asset("assets/group.png"),
             ),
           ),
         ],

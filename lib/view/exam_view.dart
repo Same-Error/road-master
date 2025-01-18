@@ -1,16 +1,16 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:road_master/result_fail.dart';
+import 'package:road_master/view/result_fail.dart';
 
-class Exam extends StatefulWidget {
-  const Exam({super.key});
+class ExamView extends StatefulWidget {
+  const ExamView({super.key});
 
   @override
-  State<Exam> createState() => _ExamState();
+  State<ExamView> createState() => _ExamViewState();
 }
 
-class _ExamState extends State<Exam> {
+class _ExamViewState extends State<ExamView> {
   @override
   void initState() {
     // TODO: implement initState

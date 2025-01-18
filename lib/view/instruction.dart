@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gap/gap.dart';
-import 'package:road_master/exam.dart';
-import 'package:road_master/questions.dart';
+import 'package:road_master/view/exam_view.dart';
 
 class Instruction extends StatelessWidget {
   Instruction({super.key});
@@ -69,7 +67,7 @@ class Instruction extends StatelessWidget {
               child: ElevatedButton(
                 onPressed: () {
                   Navigator.push(
-                      context, MaterialPageRoute(builder: (context) => Exam()));
+                      context, MaterialPageRoute(builder: (context) => ExamView()));
                 },
                 child: Text(
                   "Start Exam",

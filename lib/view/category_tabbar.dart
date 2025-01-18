@@ -1,19 +1,18 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:gap/gap.dart';
 import 'package:http/http.dart' as http;
-import 'package:road_master/category_modal.dart';
-import 'package:road_master/driving_manuals.dart';
+import 'package:road_master/modal/category_modal.dart';
+import 'package:road_master/view/driving_manuals_view.dart';
 
-class Tabbar_category extends StatefulWidget {
-  const Tabbar_category({super.key});
+class CategoryTabbar extends StatefulWidget {
+  const CategoryTabbar({super.key});
 
   @override
-  State<Tabbar_category> createState() => _Tabbar_categoryState();
+  State<CategoryTabbar> createState() => _CategoryTabbarState();
 }
 
-class _Tabbar_categoryState extends State<Tabbar_category> {
+class _CategoryTabbarState extends State<CategoryTabbar> {
   List<OfCategory>? response;
   void getCat() async {
     try {
@@ -54,7 +53,7 @@ class _Tabbar_categoryState extends State<Tabbar_category> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => DrivingManuals()));
+                            builder: (context) => DrivingManualsView()));
                   },
                   child: Card(
                     shape: RoundedRectangleBorder(
@@ -75,7 +74,7 @@ class _Tabbar_categoryState extends State<Tabbar_category> {
                           SizedBox(
                             height: 80,
                             width: 80,
-                            child: Image.asset(response![i].catImage ?? ""),
+                            child: Image.network(response![i].catImage ?? ""),
                           ),
                           Text(
                             response![i].catName ?? "",
@@ -96,7 +95,7 @@ class _Tabbar_categoryState extends State<Tabbar_category> {
                           SizedBox(
                             height: 40,
                             width: 40,
-                            child: Image.asset("assets/group.png"),
+                            child: Image.asset("assets/group_arrow.png"),
                           ),
                         ],
                       ),

@@ -2,26 +2,24 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'package:road_master/modal/advanced_modal.dart';
-import 'package:road_master/modal/intro_modal.dart';
 import 'package:road_master/modal/speed_modal.dart';
 
-class DefenceDriving extends StatefulWidget {
-  DefenceDriving({super.key});
+class SpeedControl extends StatefulWidget {
+  SpeedControl({super.key});
 
   @override
-  State<DefenceDriving> createState() => _DefenceDrivingState();
+  State<SpeedControl> createState() => _SpeedControlState();
 }
 
-class _DefenceDrivingState extends State<DefenceDriving> {
-  List<OfAdvanced>? response;
+class _SpeedControlState extends State<SpeedControl> {
+  List<OfIntermediate>? response;
 
   void getIntro() async {
     try {
       var api = await http.get(Uri.parse(
-          "https://appy.trycatchtech.com/v3/rto_advanced/post_list?cat_id=1&level=advanced"));
+          "https://appy.trycatchtech.com/v3/rto_advanced/post_list?cat_id=1&level=intermediate"));
       if (api.statusCode == 200) {
-        response = OfAdvanced.advance(jsonDecode(api.body));
+        response = OfIntermediate.speed(jsonDecode(api.body));
 
         setState(() {});
       }
@@ -44,7 +42,7 @@ class _DefenceDrivingState extends State<DefenceDriving> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         title: Text(
-          "Defence Driving",
+          "Speed Control",
           style: TextStyle(
             fontWeight: FontWeight.bold,
           ),

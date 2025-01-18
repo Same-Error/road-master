@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class GetStarted1 extends StatelessWidget {
-  const GetStarted1({super.key});
+class GetStarted extends StatelessWidget {
+  const GetStarted({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +11,7 @@ class GetStarted1 extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Image.asset("assets/getstarted/rectangle.png"),
+          Image.asset("assets/rectangle.png"),
         ],
       ),
     );

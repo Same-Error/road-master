@@ -1,11 +1,9 @@
 import 'dart:convert';
 
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:road_master/category_modal.dart';
-import 'package:road_master/tabbar_category.dart';
-import 'package:road_master/test.dart';
+import 'package:road_master/modal/category_modal.dart';
+import 'package:road_master/view/category_tabbar.dart';
+import 'package:road_master/view/test.dart';
 import 'package:road_master/modal/test_modal.dart';
 import 'package:http/http.dart' as http;
 
@@ -71,7 +69,7 @@ class _TwoWheelerState extends State<TwoWheeler> {
         ),
         appBar: AppBar(
           title: Text(
-            "APP NAME",
+            "ROAD MASTER",
             style: TextStyle(
               color: Colors.white,
             ),
@@ -222,12 +220,13 @@ class _TwoWheelerState extends State<TwoWheeler> {
                                               width: 100,
                                               child: Column(
                                                 mainAxisSize: MainAxisSize.min,
-                                                mainAxisAlignment: MainAxisAlignment.center,
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
                                                 children: [
                                                   SizedBox(
                                                     height: 80,
                                                     width: 80,
-                                                    child: Image.asset(
+                                                    child: Image.network(
                                                         response![i].catImage ??
                                                             ""),
                                                   ),
@@ -256,7 +255,7 @@ class _TwoWheelerState extends State<TwoWheeler> {
                 ),
               ),
             ),
-            Tabbar_category(),
+            CategoryTabbar(),
             Test(),
           ],
         ),

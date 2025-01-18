@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:gap/gap.dart';
-import 'package:road_master/four_wheeler.dart';
-import 'package:road_master/two_wheeler.dart';
+import 'package:road_master/view/four_wheeler.dart';
+import 'package:road_master/view/two_wheeler.dart';
 
 class VehicleScreen extends StatelessWidget {
   const VehicleScreen({super.key});
@@ -13,7 +12,7 @@ class VehicleScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.white,
         title: Text(
-          "APP NAME",
+          "ROAD MASTER",
         ),
         centerTitle: true,
       ),
@@ -119,7 +118,7 @@ class VehicleScreen extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
-                            "Two Wheeler",
+                            "Four Wheeler",
                             style: TextStyle(
                                 color: Colors.black,
                                 fontWeight: FontWeight.bold,

@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:road_master/advanced_view.dart';
-import 'package:road_master/beginner.dart';
-import 'package:road_master/intermediate.dart';
-import 'package:road_master/modal/test_modal.dart';
+import 'package:road_master/view/advanced_view.dart';
+import 'package:road_master/view/intermediate_view.dart';
+import 'package:road_master/view/beginner_view.dart';
 
-class DrivingManuals extends StatelessWidget {
-  const DrivingManuals({super.key});
+class DrivingManualsView extends StatelessWidget {
+  const DrivingManualsView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -33,29 +32,11 @@ class DrivingManuals extends StatelessWidget {
           ),
         ),
         body: TabBarView(children: [
-          Beginner_Manual(),
-          Intermediate_Manual(),
+          BeginnerView(),
+          IntermediateView(),
           AdvancedView(),
         ]),
       ),
     );
-  }
-}
-
-class Intermediate extends StatelessWidget {
-  const Intermediate({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Placeholder();
-  }
-}
-
-class Advanced extends StatelessWidget {
-  const Advanced({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Placeholder();
   }
 }

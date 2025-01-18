@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:road_master/defence_driving.dart';
-import 'package:road_master/intro_to_driving.dart';
-import 'package:road_master/speed_control.dart';
-import 'package:road_master/modal/test_modal.dart';
+import 'package:road_master/view/defence_driving_view.dart';
+import 'package:road_master/modal/tiles_modal.dart';
 
 class AdvancedView extends StatelessWidget {
   AdvancedView({super.key});
@@ -24,13 +22,13 @@ class AdvancedView extends StatelessWidget {
             return GestureDetector(
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => DefenceDriving()));
+                    MaterialPageRoute(builder: (context) => DefenceDrivingView()));
               },
               child: Card(
                 color: Colors.white,
                 child: ListTile(
                   title: Text(oftiles[i].titles),
-                  trailing: Image.asset("assets/group.png"),
+                  trailing: Image.asset("assets/group_arrow.png"),
                 ),
               ),
             );

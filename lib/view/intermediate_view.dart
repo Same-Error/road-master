@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:road_master/intro_to_driving.dart';
-import 'package:road_master/speed_control.dart';
-import 'package:road_master/modal/test_modal.dart';
+import 'package:road_master/modal/tiles_modal.dart';
+import 'package:road_master/view/speed_control.dart';
 
-class Intermediate_Manual extends StatelessWidget {
-  Intermediate_Manual({super.key});
+class IntermediateView extends StatelessWidget {
+  IntermediateView({super.key});
 
   List<OfTiles> oftiles = [
     OfTiles(titles: "Speed Control"),
@@ -33,7 +32,7 @@ class Intermediate_Manual extends StatelessWidget {
                 color: Colors.white,
                 child: ListTile(
                   title: Text(oftiles[i].titles),
-                  trailing: Image.asset("assets/group.png"),
+                  trailing: Image.asset("assets/group_arrow.png"),
                 ),
               ),
             );

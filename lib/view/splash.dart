@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:road_master/onboarding1.dart';
+import 'package:road_master/view/onboarding1.dart';
 
 class Splash extends StatefulWidget {
   const Splash({super.key});
@@ -17,7 +17,7 @@ class _SplashState extends State<Splash> {
     // TODO: implement initState
     super.initState();
     Timer(Duration(seconds: 3), () {
-      Navigator.push(
+      Navigator.pushReplacement(
           context, MaterialPageRoute(builder: (context) => Onboarding1()));
     });
   }
@@ -54,15 +54,15 @@ class _SplashState extends State<Splash> {
               children: [
                 Column(
                   children: [
-                    Image.asset("assets/splash/frame.png"),
+                    Image.asset("assets/frame.png"),
                     Gap(50),
-                    Image.asset("assets/splash/road_master.png"),
+                    Image.asset("assets/road_master.png"),
                   ],
                 ),
                 Column(
                   children: [
-                    Image.asset("assets/splash/car.png"),
-                    Image.asset("assets/splash/this_action.png")
+                    Image.asset("assets/car.png"),
+                    Image.asset("assets/this_action.png")
                   ],
                 ),
               ],

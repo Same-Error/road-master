@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:road_master/instruction.dart';
+import 'package:road_master/view/instruction.dart';
 import 'package:road_master/modal/test_modal.dart';
 
 class Test extends StatelessWidget {
@@ -49,12 +49,12 @@ class Test extends StatelessWidget {
                 height: 100,
                 width: double.infinity,
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Container(
-                      height: 50,
-                      width: 50,
-                      child: Image.asset(test[i].image ?? ""),
+                      height: 40,
+                      width: 40,
+                      child: Image.asset("assets/${test[i].image}.png"),
                     ),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -75,7 +75,7 @@ class Test extends StatelessWidget {
                         ),
                       ],
                     ),
-                    Image.asset("assets/group.png"),
+                    Image.asset("assets/group_arrow.png"),
                   ],
                 ),
               ),

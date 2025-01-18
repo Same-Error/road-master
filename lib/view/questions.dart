@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:road_master/dashboard.dart';
+import 'package:road_master/view/dashboard.dart';
 
 class Questions extends StatefulWidget {
   const Questions({super.key});
@@ -161,7 +161,7 @@ class _QuestionsState extends State<Questions> {
                           width: 200,
                           child: ElevatedButton(
                             onPressed: () {
-                              Navigator.push(
+                              Navigator.pushReplacement(
                                 context,
                                 MaterialPageRoute(
                                   builder: (context) => Dashboard(),

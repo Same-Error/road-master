@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:road_master/questions.dart';
+import 'package:road_master/view/questions.dart';
 
 class TC extends StatelessWidget {
   const TC({super.key});
@@ -79,6 +79,7 @@ class TC extends StatelessWidget {
                 text: TextSpan(
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
+                    color: Colors.black,
                   ),
                   children: [
                     TextSpan(
@@ -112,7 +113,7 @@ class TC extends StatelessWidget {
                 height: 35,
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.push(context,
+                    Navigator.pushReplacement(context,
                         MaterialPageRoute(builder: (context) => Questions()));
                   },
                   child: Text(

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:road_master/intro_to_driving.dart';
-import 'package:road_master/modal/test_modal.dart';
+import 'package:road_master/view/intro_to_driving.dart';
+import 'package:road_master/modal/tiles_modal.dart';
 
-class Beginner_Manual extends StatelessWidget {
-  Beginner_Manual({super.key});
+class BeginnerView extends StatelessWidget {
+  BeginnerView({super.key});
 
   List<OfTiles> oftiles = [
     OfTiles(titles: "Introduction to Driving"),
@@ -31,7 +31,7 @@ class Beginner_Manual extends StatelessWidget {
                 color: Colors.white,
                 child: ListTile(
                   title: Text(oftiles[i].titles),
-                  trailing: Image.asset("assets/group.png"),
+                  trailing: Image.asset("assets/group_arrow.png"),
                 ),
               ),
             );
